@@ -22,6 +22,7 @@ def execute_query(connection, query):
     except Error as e:
         print(f"The error '{e}' has occurred")
 
+
 def execute_read_query(connection, query):
     cursor = connection.cursor(dictionary=True)
     result = None
@@ -30,3 +31,4 @@ def execute_read_query(connection, query):
         result = cursor.fetchall()
         return result
     except Error as e:
+        print(f"The error '{e}' has occurred")
