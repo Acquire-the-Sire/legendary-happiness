@@ -7,7 +7,7 @@ from sqlfunc import execute_read_query
 
 
 myCreds = credentials.Creds
-create_connection(myCreds.conString, myCreds.userName, myCreds.password, myCreds.dbName)
+conn = create_connection(myCreds.conString, myCreds.userName, myCreds.password, myCreds.dbName)
 
 query = """INSERT INTO USERS (firstname, lastname)
 values = (Thomas, Edison)"""
@@ -39,3 +39,6 @@ execute_query(conn, update_invoice_query)
 invoice_id_to_delete = 1
 delete_statement = "DELETE FROM invoices WHERE id = %s" % (invoice_id_to_delete)
 execute_query(conn, delete_statement)
+
+delete_table_statement = "DROP TABLE invoices"
+execute_query(conn, delete_table_statement)
