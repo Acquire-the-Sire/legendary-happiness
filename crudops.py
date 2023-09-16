@@ -7,10 +7,9 @@ from sqlfunc import execute_read_query
 
 
 myCreds = credentials.Creds
-print(myCreds.conString, myCreds.userName, myCreds.password, myCreds.dbName)
 create_connection(myCreds.conString, myCreds.userName, myCreds.password, myCreds.dbName)
 
-query = """ INSERT INTO USERS (firstname, lastname)
+query = """INSERT INTO USERS (firstname, lastname)
 values = (Thomas, Edison)"""
 
 create_invoice_table = """
@@ -34,4 +33,9 @@ new_amount = 30
 update_invoice_query = """
 UPDATE invoices
 SET amount = %s
-WHERE id = 1"""
+WHERE id = 1""" % (new_amount)
+execute_query(conn, update_invoice_query)
+
+invoice_id_to_delete = 1
+delete_statement = "DELETE FROM invoices WHERE id = %s" % (invoice_id_to_delete)
+execute_query(conn, delete_statement)
