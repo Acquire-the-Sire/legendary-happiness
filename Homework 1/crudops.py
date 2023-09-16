@@ -1,8 +1,8 @@
 import mysql.connector
 from mysql.connector import Error
-from sql import create_connection
-from sql import execute_query
-from sql import execute_read_query
+from sqlfunc import create_connection
+from sqlfunc import execute_query
+from sqlfunc import execute_read_query
 
 
 myCreds = credentials.Creds
