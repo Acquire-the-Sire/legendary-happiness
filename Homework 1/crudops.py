@@ -1,3 +1,3 @@
-from sql import create_connection
-from credentials import Creds
-create_connection(Creds.conString, Creds.dbName, Creds.userName)
+import mysql.connector
+m1 = credentials.Creds
+print(m1)
