@@ -6,4 +6,4 @@ class Creds:
 
     password = "2oranges4me",
 
-    dbName = "cis3368falldb"
+    dbName = "cis3368falldb",
