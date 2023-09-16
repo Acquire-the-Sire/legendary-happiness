@@ -31,3 +31,7 @@ query = "INSERT INTO invoices (amount, description, user_id) VALUES (%s, '%s', %
 execute_query(conn, query)
 
 new_amount = 30
+update_invoice_query = """
+UPDATE invoices
+SET amount = %s
+WHERE id = 1"""
