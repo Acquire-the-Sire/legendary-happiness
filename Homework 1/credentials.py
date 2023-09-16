@@ -1,8 +1,8 @@
 class Creds:
-    conString = "cis3368fall.cormgjdgnb98.us-east-1.rds.amazonaws.com", # this is your db endpoint address
+    conString = "cis3368fall.cormgjdgnb98.us-east-1.rds.amazonaws.com",
 
-    userName = "admin", # username for MySQL db on AWS
+    userName = "admin",
 
-    password = "2oranges4me", # password for MySQL db on AWS
+    password = "2oranges4me",
 
-    dbName = "cis3368falldb" # database name which we created in MySQL workbench.
+    dbName = "cis3368falldb"
