@@ -8,7 +8,7 @@ from sqlfunc import execute_read_query
 
 myCreds = credentials.Creds
 print(myCreds.conString, myCreds.userName, myCreds.password, myCreds.dbName)
-create_connection("cis3368fall.cormgjdgnb98.us-east-1.rds.amazonaws.com", "admin", "2oranges4me", "cis3368falldb")
+create_connection(myCreds.conString, myCreds.userName, myCreds.password, myCreds.dbName)
 
 query = """ INSERT INTO USERS (firstname, lastname)
 values = (Thomas, Edison)"""
